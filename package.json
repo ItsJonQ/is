@@ -8,6 +8,8 @@
   "private": false,
   "scripts": {
     "prestart": "zero prestart",
+    "coverage": "nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
+    "open:coverage": "open ./coverage/lcov-report/index.html",
     "build:es": "BUILD_FORMAT=es zero build -d dist/es",
     "build:cjs": "BUILD_FORMAT=cjs zero build -d dist/cjs",
     "build": "npm run build:cjs && npm run build:es -- --no-clean",
@@ -21,6 +23,15 @@
     "version": "npm run build",
     "precommit": "zero pre-commit"
   },
+  "author": "Jon Quach <hello@jonquach.com> (https://jonquach.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsjonq/is.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itsjonq/is/issues"
+  },
+  "homepage": "https://github.com/itsjonq/is#readme",
   "keywords": [
     "is",
     "type",
@@ -36,7 +47,9 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@itsjonq/zero": "4.1.8"
+    "@itsjonq/zero": "4.1.8",
+    "coveralls": "3.0.9",
+    "nyc": "14.1.1"
   },
   "publishConfig": {
     "access": "public"
