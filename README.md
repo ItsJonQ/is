@@ -6,7 +6,8 @@
 
 > A tiny type checker
 
-`is` is a simple sub 400b library for type checking. For a more feature-packed version, check out [@sindresorhus/is](https://github.com/sindresorhus/is).
+`is` is a simple sub 400B library for type checking.<br />
+For a more feature-packed version, check out [@sindresorhus/is](https://github.com/sindresorhus/is).
 
 ## Table of Contents
 
