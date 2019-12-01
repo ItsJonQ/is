@@ -6,6 +6,19 @@
 
 > A tiny type checker
 
+`is` is a simple sub 400b library for type checking. For a more feature-packed version, check out [@sindresorhus/is](https://github.com/sindresorhus/is).
+
+## Table of Contents
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+-   [Installation](#installation)
+-   [Usage](#usage)
+    -   [Supported types](#supported-types)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Installation
 
 ```
@@ -35,8 +48,10 @@ is.plainObject(fn);
 ### Supported types
 
 -   `is.array`
+-   `is.blob`
 -   `is.boolean`
 -   `is.defined`
+-   `is.file`
 -   `is.function`
 -   `is.map`
 -   `is.null`
@@ -48,7 +63,3 @@ is.plainObject(fn);
 -   `is.symbol`
 -   `is.undefined`
 -   `is.weakMap`
-
-## Thanks
-
-This library was inspired by [@sindresorhus/is](https://github.com/sindresorhus/is).

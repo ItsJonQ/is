@@ -5,6 +5,14 @@ test('should test for array', () => {
 	expect(is.array('123')).toBe(false);
 });
 
+test('should test for Blob', () => {
+	/* eslint-disable no-undef */
+	expect(is.blob(new Blob())).toBe(true);
+	/* eslint-enable no-undef */
+	expect(is.blob('blob')).toBe(false);
+	expect(is.blob(123)).toBe(false);
+});
+
 test('should test for boolean', () => {
 	expect(is.boolean(true)).toBe(true);
 	expect(is.boolean(false)).toBe(true);
@@ -16,6 +24,14 @@ test('should test for defined', () => {
 	expect(is.defined(0)).toBe(true);
 	expect(is.defined(undefined)).toBe(false);
 	expect(is.defined(null)).toBe(false);
+});
+
+test('should test for File', () => {
+	/* eslint-disable no-undef */
+	expect(is.file(new File([''], '', { type: 'text/html' }))).toBe(true);
+	/* eslint-enable no-undef */
+	expect(is.file('File')).toBe(false);
+	expect(is.file(123)).toBe(false);
 });
 
 test('should test for function', () => {
@@ -54,7 +70,7 @@ test('should test for null', () => {
 });
 
 test('should test for object', () => {
-	expect(is.object([])).toBe(true);
+	expect(is.object(new Object())).toBe(true);
 	expect(is.object({})).toBe(true);
 	expect(is.object(() => {})).toBe(false);
 	expect(is.object('')).toBe(false);
@@ -62,6 +78,7 @@ test('should test for object', () => {
 });
 
 test('should test for plainObject', () => {
+	expect(is.plainObject(new Object())).toBe(true);
 	expect(is.plainObject({})).toBe(true);
 	expect(is.plainObject([])).toBe(false);
 	expect(is.plainObject(() => {})).toBe(false);

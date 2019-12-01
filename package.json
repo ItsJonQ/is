@@ -15,6 +15,7 @@
     "build": "npm run build:cjs && npm run build:es -- --no-clean",
     "lint": "zero lint",
     "dev": "zero test",
+    "start": "npm run dev",
     "test": "zero test --coverage",
     "test:coverage": "zero test --coverage",
     "format": "zero format",
@@ -33,11 +34,16 @@
   },
   "homepage": "https://github.com/itsjonq/is#readme",
   "keywords": [
-    "is",
     "type",
     "check",
     "checker",
+    "typechecker",
+    "typechecking",
+    "type-checking",
+    "check-type",
+    "plain-object",
     "tiny",
+    "is",
     "small"
   ],
   "files": [
