@@ -1,5 +1,9 @@
 # 💡 is
 
+[![Build Status](https://travis-ci.org/ItsJonQ/is.svg?branch=master)](https://travis-ci.org/ItsJonQ/is)
+[![Coverage Status](https://coveralls.io/repos/github/ItsJonQ/is/badge.svg?branch=master)](https://coveralls.io/github/ItsJonQ/is?branch=master)
+[![Bundle size](https://badgen.net/bundlephobia/minzip/@itsjonq/is)](https://bundlephobia.com/result?p=@itsjonq/is)
+
 > A tiny type checker
 
 ## Installation
