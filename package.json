@@ -1,0 +1,44 @@
+{
+  "name": "@itsjonq/is",
+  "version": "0.0.0",
+  "description": "A tiny type checker",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "sideEffects": false,
+  "private": false,
+  "scripts": {
+    "prestart": "zero prestart",
+    "build:es": "BUILD_FORMAT=es zero build -d dist/es",
+    "build:cjs": "BUILD_FORMAT=cjs zero build -d dist/cjs",
+    "build": "npm run build:cjs && npm run build:es -- --no-clean",
+    "lint": "zero lint",
+    "dev": "zero test",
+    "test": "zero test --coverage",
+    "test:coverage": "zero test --coverage",
+    "format": "zero format",
+    "validate": "zero validate",
+    "release": "zero release",
+    "version": "npm run build",
+    "precommit": "zero pre-commit"
+  },
+  "keywords": [
+    "is",
+    "type",
+    "check",
+    "checker",
+    "tiny",
+    "small"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@itsjonq/zero": "4.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
