@@ -2,7 +2,7 @@
  * Returns the object type of the given payload
  */
 function isType(type) {
-	return o => {
+	return (o) => {
 		return {}.toString.call(o).slice(8, -1) === type;
 	};
 }
@@ -15,7 +15,7 @@ export const is = {
 	blob: isType('Blob'),
 	boolean: isType('Boolean'),
 	date: isType('Date'),
-	defined: function(o) {
+	defined: function (o) {
 		return !(this.undefined(o) || this.null(o));
 	},
 	file: isType('File'),
@@ -23,7 +23,7 @@ export const is = {
 	map: isType('Map'),
 	null: isType('Null'),
 	number: isType('Number'),
-	plainObject: o => {
+	plainObject: (o) => {
 		if (!isType('Object')(o)) return false;
 		return (
 			o.constructor === Object &&

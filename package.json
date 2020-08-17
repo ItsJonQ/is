@@ -6,6 +6,7 @@
   "module": "dist/es/index.js",
   "sideEffects": false,
   "private": false,
+  "types": "types",
   "scripts": {
     "prestart": "zero prestart",
     "coverage": "nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
@@ -53,9 +54,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@itsjonq/zero": "4.1.8",
-    "coveralls": "3.0.9",
-    "nyc": "14.1.1"
+    "@itsjonq/zero": "5.0.2"
   },
   "publishConfig": {
     "access": "public"
