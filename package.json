@@ -48,6 +48,7 @@
     "small"
   ],
   "files": [
+    "types",
     "dist",
     "README.md",
     "LICENSE"
